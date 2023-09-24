@@ -284,8 +284,8 @@ namespace ImGui
         const MarkdownConfig*   config  = NULL;
     };
 
-    typedef void                (MarkdownLinkCallback)( MarkdownLinkCallbackData data );    
-    typedef void                (MarkdownTooltipCallback)( MarkdownTooltipCallbackData data );
+    typedef void                MarkdownLinkCallback( MarkdownLinkCallbackData data );    
+    typedef void                MarkdownTooltipCallback( MarkdownTooltipCallbackData data );
 
     inline void defaultMarkdownTooltipCallback( MarkdownTooltipCallbackData data_ )
     {
@@ -299,8 +299,8 @@ namespace ImGui
         }
     }
 
-    typedef MarkdownImageData   (MarkdownImageCallback)( MarkdownLinkCallbackData data );
-    typedef void                (MarkdownFormalCallback)( const MarkdownFormatInfo& markdownFormatInfo_, bool start_ );
+    typedef MarkdownImageData   MarkdownImageCallback( MarkdownLinkCallbackData data );
+    typedef void                MarkdownFormalCallback( const MarkdownFormatInfo& markdownFormatInfo_, bool start_ );
 
     inline void defaultMarkdownFormatCallback( const MarkdownFormatInfo& markdownFormatInfo_, bool start_ );
 
